@@ -7,7 +7,8 @@ class SnackListView(ListView):
   model = Snack
 
 class SnackDetailView(DetailView):
-  pass
+  template_name = 'snack_detail.html'
+  model = Snack
 
 class SnackCreateView(CreateView):
   pass
