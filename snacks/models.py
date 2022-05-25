@@ -9,7 +9,7 @@ class Snack(models.Model):
   purchaser = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
   description = models.TextField(default=None, blank=True)
   
-  def _str__(self):
+  def __str__(self):
     return self.title
   
   def get_absolute_url(self):
