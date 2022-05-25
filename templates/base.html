@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Snacks</title>
+</head>
+<body style="background: linear-gradient( #F1C0E8, #CFBAF0, #A3C4F3, #90DBF4); height: 100%;">
+  <h1 style="width: 100%; display: flex; justify-content: center; align-items: center"> Welcome to Eden's Snacks!</h1>
+  <h2 style="width: 100%; display: flex; justify-content: center; align-items: center"> You get a snack! And you get a snack! Create a snack! Update an existing Snack! Delete Snacks! </h2>
+  <nav style="width: 100%; display: flex; justify-content: center; align-items: center; border-style: double; border-width: 3px; border-radius: 3px;">
+    <a href="{%url 'home' %}" style="color:darkpurple; font-size: 26px; padding:10px;">Home Page</a>
+    <a href="{%url 'snack_list'%}" style="color:darkblue; font-size: 26px; padding:10px;">Snack List</a>
+    <a href="{%url 'snack_create'%}" style="color:darkmagenta; font-size: 26px; padding:10px;">Add a New Snack!</a>
+  </nav>
+
+  {%block content%}
+  Child Content Will Live Here!
+  {%endblock content%}
+</body>
+</html>
