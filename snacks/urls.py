@@ -1,8 +1,9 @@
 from django.urls import path
-from .views import ( SnackCreateView, SnackDeleteView, SnackListView, SnackUpdateView, SnackDetailView)
+from .views import ( HomePageView, SnackCreateView, SnackDeleteView, SnackListView, SnackUpdateView, SnackDetailView)
 
 urlpatterns = [
-    path('', SnackListView.as_view(), name="snack_list"),
+    path('', HomePageView.as_view(), name='home'),
+    path('list/', SnackListView.as_view(), name="snack_list"),
     path("<int:pk>/", SnackDetailView.as_view(), name="snack_detail"),
     path("create/", SnackCreateView.as_view(), name="snack_create"),
     path("<int:pk>/update/", SnackUpdateView.as_view(), name="snack_update"),
