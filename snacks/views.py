@@ -11,7 +11,9 @@ class SnackDetailView(DetailView):
   model = Snack
 
 class SnackCreateView(CreateView):
-  pass
+  template_name = 'snack_create.html'
+  model = Snack
+  fields = ['title', 'purchaser', 'description']
 
 class SnackUpdateView(UpdateView):
   pass
