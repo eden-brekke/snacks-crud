@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 
 {%block content%}
-<h2> Everything you could want to know about {{ snack.title }} </h2>
+<h2> Everything you could want to know about {{ snack.title }} (Well maybe not everything)</h2>
 <h3> {{ snack.purchaser }} added this snack! </h3>
 <h3> About the Snack: {{ snack.description }} </h3>
-<a style="font-size:24px; color:darkpurple" href="{% url 'snack_update' snack.pk %}">Update.This.Snack!</a> <br>
-<a style="font-size:24px; color:darkmagenta" href="{% url 'snack_delete' snack.pk %}">BURN THE SNACK(Delete)</a>
+<a style="font-size:24px; color:darkpurple; margin:20px; padding:20px;" href="{% url 'snack_update' snack.pk %}">Update.This.Snack!</a>
+<a style="font-size:24px; color:darkmagenta; margin:20px; padding:20px;" href="{% url 'snack_delete' snack.pk %}">BURN THE SNACK(Delete)</a>
 
 {%endblock%}
